@@ -1,11 +1,18 @@
-import { Search, User } from "lucide-react";
+import { User } from "lucide-react";
 import { Button } from "./button";
-import { Input } from "./input";
+import LoginModal from "../Login";
+import SignUp from "../SignUp";
+
+import { AlertDialog, AlertDialogContent } from "@/components/ui/alert-dialog";
+import { useState } from "react";
 
 const Header = () => {
+  const [openLogin, setOpenLogin] = useState(false);
+  const [openSignup, setOpenSignup] = useState(false);
+  console.log(openLogin)
   return (
     <header className="sticky top-0 z-50 w-full glass-effect shadow-soft">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between gap-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shadow-glow">
@@ -14,28 +21,30 @@ const Header = () => {
           <span className="font-bold text-xl bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent hidden sm:block">
             ServiceHub
           </span>
-        </div>
-
-        {/* Search Bar */}
-        <div className="flex-1 max-w-xl">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-            <Input
-              placeholder="Search for services..."
-              className="pl-10 bg-white/80 backdrop-blur border-primary/20 focus:border-primary transition-smooth rounded-full"
-            />
-          </div>
-        </div>
+        </div>  
 
         {/* Profile */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="rounded-full hover:bg-primary/10 hover:text-primary transition-smooth"
-        >
-          <User className="w-5 h-5" />
-        </Button>
+       <Button
+  variant="ghost"
+  size="icon"
+  className="w-20 h-20 rounded-full hover:bg-primary/10 hover:text-primary transition-all"
+  onClick={() => setOpenLogin(true)}
+>
+ <User className="w-28 h-28 text-black stroke-[1.5]" />
+
+</Button>
+
       </div>
+      <AlertDialog open={openSignup} onOpenChange={setOpenSignup}>
+        <AlertDialogContent>
+          <SignUp setOpenSignup={setOpenSignup} setOpenLogin={setOpenLogin}/>
+        </AlertDialogContent>
+      </AlertDialog>
+      <AlertDialog open={openLogin} onOpenChange={setOpenLogin}>
+        <AlertDialogContent>
+          <LoginModal setOpenLogin={setOpenLogin} setOpenSignup={setOpenSignup}/>
+        </AlertDialogContent>
+      </AlertDialog>
     </header>
   );
 };

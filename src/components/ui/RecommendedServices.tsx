@@ -51,7 +51,7 @@ const RecommendedServices = () => {
 
   return (
     <section className="py-12">
-      <div className="mb-8">
+      <div className="flex flex-col items-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
           Recommended for You
         </h2>
@@ -70,8 +70,8 @@ const RecommendedServices = () => {
               <div className="glass-effect rounded-2xl overflow-hidden shadow-soft hover:shadow-glow transition-all hover-pop h-full">
                 {/* Profile Image */}
                 <div className="relative w-full h-48 mb-4">
-                  <img 
-                    src={service.image} 
+                  <img
+                    src={service.image}
                     alt={service.name}
                     className="w-full h-full object-cover"
                   />

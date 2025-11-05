@@ -2,8 +2,11 @@ import { Wrench, Briefcase, ArrowRight } from "lucide-react";
 import { Button } from "./button";
 import blueCollarImage from "@/assets/blue-collar-service.jpg";
 import whiteCollarImage from "@/assets/white-collar-service.jpg";
+import { useNavigate } from "react-router-dom";
 
 const ServiceTypeCards = () => {
+  const navigate = useNavigate();
+
   const serviceTypes = [
     {
       icon: Wrench,
@@ -72,6 +75,7 @@ const ServiceTypeCards = () => {
               
               <Button
                 className="w-full bg-white text-primary rounded-full font-semibold shadow-glow hover:shadow-hover transition-all group-hover:scale-105 hover:bg-white/90"
+                onClick={() => navigate(`/services/${service.title.toLowerCase().replace(/ /g, "-")}`)}
               >
                 View Services
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

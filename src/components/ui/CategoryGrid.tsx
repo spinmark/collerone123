@@ -7,8 +7,10 @@ import marketerImg from "@/assets/category-marketer.jpg";
 import photographerImg from "@/assets/category-photographer.jpg";
 import plumberImg from "@/assets/category-plumber.jpg";
 import consultantImg from "@/assets/category-consultant.jpg";
+import { useNavigate } from "react-router-dom";
 
 const CategoryGrid = () => {
+  const navigate = useNavigate();
   const categories = [
     { name: "Electrician", count: "234 professionals", image: electricianImg },
     { name: "Carpenter", count: "189 professionals", image: carpenterImg },
@@ -61,6 +63,7 @@ const CategoryGrid = () => {
               <Button
                 size="sm"
                 className="rounded-full bg-white text-primary hover:bg-white/90 transition-all font-semibold"
+                onClick={() => navigate(`/sub/services/${category.name.toLowerCase()}`)}
               >
                 View Services
               </Button>
