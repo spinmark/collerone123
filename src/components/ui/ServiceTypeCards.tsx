@@ -1,5 +1,5 @@
 import { Wrench, Briefcase, ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "./button";
 import blueCollarImage from "@/assets/blue-collar-service.jpg";
 import whiteCollarImage from "@/assets/white-collar-service.jpg";
 

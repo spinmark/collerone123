@@ -1,5 +1,5 @@
 import { Star, MapPin, Clock } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "./button";
 import providerElectrician from "@/assets/provider-electrician.jpg";
 import providerDesigner from "@/assets/provider-designer.jpg";
 import providerCarpenter from "@/assets/provider-carpenter.jpg";

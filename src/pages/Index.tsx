@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import HeroBanner from "@/components/HeroBanner";
-import ServiceTypeCards from "@/components/ServiceTypeCards";
-import LocationSelector from "@/components/LocationSelector";
-import CategoryGrid from "@/components/CategoryGrid";
-import RecommendedServices from "@/components/RecommendedServices";
-import TopRatedCategories from "@/components/TopRatedCategories";
+import Header from "../components/ui/Header";
+import Footer from "@/components/ui/Footer";
+import HeroBanner from "@/components/ui/HeroBanner";
+import ServiceTypeCards from "@/components/ui/ServiceTypeCards";
+import LocationSelector from "@/components/ui/LocationSelector";
+import CategoryGrid from "@/components/ui/CategoryGrid";
+import RecommendedServices from "@/components/ui/RecommendedServices";
+import TopRatedCategories from "@/components/ui/TopRatedCategories";
 
 const Index = () => {
   return (
@@ -20,10 +20,9 @@ const Index = () => {
           <CategoryGrid />
           <RecommendedServices />
           <TopRatedCategories />
+             <Footer />
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

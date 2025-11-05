@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "./button";
 import heroElectrician from "@/assets/hero-electrician.jpg";
 import heroDesigner from "@/assets/hero-designer.jpg";
 import heroCarpenter from "@/assets/hero-carpenter.jpg";

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TrendingUp, MapPin, Star } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "./button";
 
 const TopRatedCategories = () => {
   const [activeTab, setActiveTab] = useState<"popular" | "nearby" | "trending">("popular");

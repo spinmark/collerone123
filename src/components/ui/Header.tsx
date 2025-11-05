@@ -1,6 +1,6 @@
 import { Search, User } from "lucide-react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { Button } from "./button";
+import { Input } from "./input";
 
 const Header = () => {
   return (

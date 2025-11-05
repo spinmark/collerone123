@@ -1,4 +1,4 @@
-import { Button } from "./ui/button";
+import { Button } from "./button";
 import electricianImg from "@/assets/category-electrician.jpg";
 import carpenterImg from "@/assets/category-carpenter.jpg";
 import designerImg from "@/assets/category-designer.jpg";
