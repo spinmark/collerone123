@@ -1,3 +1,4 @@
+
 import Header from "../components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import HeroBanner from "@/components/ui/HeroBanner";
@@ -16,11 +17,11 @@ const Services = () => {
           <LocationSelector />
           <CategoryGrid />
           <RecommendedServices />
-          <Footer />
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
-
 export default Services;
+

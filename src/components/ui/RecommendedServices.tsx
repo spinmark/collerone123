@@ -4,8 +4,10 @@ import providerElectrician from "@/assets/provider-electrician.jpg";
 import providerDesigner from "@/assets/provider-designer.jpg";
 import providerCarpenter from "@/assets/provider-carpenter.jpg";
 import providerMarketer from "@/assets/provider-marketer.jpg";
+import { useNavigate } from "react-router-dom";
 
 const RecommendedServices = () => {
+  const Navigate = useNavigate();
   const services = [
     {
       name: "Rajesh Kumar",
@@ -113,7 +115,7 @@ const RecommendedServices = () => {
                       <p className="text-xs text-muted-foreground">Starting at</p>
                       <p className="font-bold text-lg text-primary">{service.price}</p>
                     </div>
-                    <Button className="gradient-primary text-white rounded-full shadow-glow hover:shadow-hover transition-all">
+                    <Button className="gradient-primary text-white rounded-full shadow-glow hover:shadow-hover transition-all" onClick={() => Navigate('/booking')}>
                       Book Now
                     </Button>
                   </div>

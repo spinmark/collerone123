@@ -18,9 +18,9 @@ const Index = () => {
           <CategoryGrid />
           <RecommendedServices />
           <TopRatedCategories />
-          <Footer />
         </div>
       </main>
+       <Footer />
     </div>
   );
 };

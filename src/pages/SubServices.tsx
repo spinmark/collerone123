@@ -10,9 +10,9 @@ const Services = () => {
       <main className="container mx-auto px-4 pb-20 sm:pb-8">
         <div className="py-8 space-y-12">
           <RecommendedServices />
-          <Footer />
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
